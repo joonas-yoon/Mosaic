@@ -7,3 +7,8 @@
 meteor-platform
 insecure
 materialize:materialize
+iron:router
+accounts-ui
+accounts-password
+fongandrew:materialize-modals
+accounts-facebook

@@ -1,0 +1,17 @@
+<template name="header">
+	<link rel="shortcut icon" href="{{pathFor route='header'}}/favicon.ico">
+	<nav role="navigation">
+		<div class="nav-wrapper">
+			<a id="brand-logo-container" href="http://alps.jbnu.ac.kr/joonas" class="brand-logo">Mosaic Logic</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="#"><i class="material-icons">search</i></a></li>
+				<li><a href="#"><i class="material-icons">view_module</i></a></li>
+				<li><a href="#"><i class="material-icons">refresh</i></a></li>
+				<li><a href="#"><i class="material-icons">more_vert</i></a></li>
+				<li>{{> loginButtons}}</li>
+			</ul>
+		</div>
+	</nav>
+</template>
+
+
