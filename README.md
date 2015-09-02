@@ -16,6 +16,5 @@ git commit -m “현재형으로 설명” // 커밋해서 스냅샷을 찍는�
 git remote add origin https://github.com/username/myproject.git // 로컬과 원격 저장소를 연결한다.
 git remote -v // 연결상태를 확인한다.
 git push origin master // 깃허브로 푸시한다.
-
-From: https://nolboo.github.io/blog/2013/10/06/github-for-beginner/
 ```
+From: [https://nolboo...github-for-beginner/](https://nolboo.github.io/blog/2013/10/06/github-for-beginner/)
