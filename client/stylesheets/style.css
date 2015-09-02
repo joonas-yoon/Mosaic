@@ -1,0 +1,23 @@
+div.cell {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 0;
+	background-color: white;
+	cursor: pointer;
+}
+div.cell.marked {
+	background-image: url('http://alps.jbnu.ac.kr/joonas/mark.png');
+	background-position: center;
+}
+div.cell.filled {
+	background-color: #4db6ac;
+}
+div.cell-odd {
+	background-color: #b2dfdb;
+}
+div#playBoard {
+	position: relative;
+	margin: auto;
+	background-color: #26a69a;
+}
