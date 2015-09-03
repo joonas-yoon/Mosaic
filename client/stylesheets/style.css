@@ -21,3 +21,14 @@ div#playBoard {
 	margin: auto;
 	background-color: #26a69a;
 }
+nav .brand-logo {
+	color: rgba(0,0,0,.0);
+	font-size: 1em;
+	background-image: url('./logo.cube.png');
+    background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+div#main {
+	padding: 3.5em 0;
+}
