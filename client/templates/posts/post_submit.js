@@ -13,8 +13,9 @@ Template.postSubmit.events({
 			return alert(error.reason);
 
 		// show this result but route anyway
-		if (result.postExists)
-			alert('This link has already been posted');
+		if (result.postExists) {
+			return Materialize.toast('This link has already been posted', 4000);
+		}
 
 		Router.go('postPage', {_id: result._id});  
 	});

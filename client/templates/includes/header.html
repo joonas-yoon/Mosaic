@@ -1,15 +1,13 @@
 <template name="header">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="shortcut icon" href="{{pathFor 'header'}}/favicon.ico">
 	<nav role="navigation">
 		<div class="nav-wrapper">
 			<a id="brand-logo-container" href="http://alps.jbnu.ac.kr:2012" class="brand-logo">Mosaic Logic</a>
 			<ul class="right hide-on-med-and-down">
 				<li>{{> loginButtons}}</li>
+				<li><a href="{{pathFor 'postsList'}}"><i class="material-icons">list</i></a></li>
 				{{#if currentUser}}
 				<li><a href="{{pathFor 'postSubmit'}}"><i class="material-icons">chat_bubble_outline</i></a></li>
 				<li><a href="#"><i class="material-icons">view_module</i></a></li>
-				<li><a href="#"><i class="material-icons">refresh</i></a></li>
 				<li><a href="#"><i class="material-icons">more_vert</i></a></li>
 				{{/if}}
 			</ul>
