@@ -17,11 +17,11 @@ Template.postSubmit.events({
 			return Materialize.toast('This link has already been posted', 4000);
 		}
 
-		Router.go('postPage', {_id: result._id});  
+//		Router.go('postPage', {_id: result._id});  
 	});
 
-
-    post._id = Posts.insert(post);
-    Router.go('postPage', post);
+//  post._id = Posts.insert(post);
+//  Router.go('postPage', post);
+	Router.go('postsList');
   }
 });
