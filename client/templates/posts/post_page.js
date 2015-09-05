@@ -1,4 +1,4 @@
-Template.postPage.helpers({
+Template.postPageView.helpers({
 	ownPost: function() {
 		return this.userId === Meteor.userId();
 	}
