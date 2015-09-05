@@ -1,3 +1,13 @@
+/**
+ * Customize derived CSS
+ */
+.input-field label {
+	width: 100%;
+}
+
+/**
+ * Added CSS Properties
+ */
 div.cell {
 	position: absolute;
 	width: 20px;

@@ -9,14 +9,14 @@
 				<div class="card-content">
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate" name="title" id="title" />
-							<label for="title">Title</label>
+							<input type="text" class="validate {{errorClass 'title'}}" name="title" id="title" />
+							<label for="title" data-error="{{errorMessage 'title'}}" data-success="It is right!">Title</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate" name="url" id="url" />
-							<label for="url">URL</label>
+							<input type="text" class="validate {{errorClass 'url'}}" name="url" id="url" />
+							<label for="url" data-error="{{errorMessage 'url'}}" data-success="It is right!">URL</label>
 						</div>
 					</div>
 				</div>
