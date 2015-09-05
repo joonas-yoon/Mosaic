@@ -2,8 +2,12 @@
 	{{> postPageView}}	
 	<div class="row">
 		<div class="col s12 l6 offset-l3">
-			<div class="divider" style="margin-bottom:2.0em"></div>
+			<div class="divider" style="margin-bottom:2.0em;"></div>
 			{{> postPageComments}}
+			{{#if currentUser}}
+				<div class="divider" style="margin:2.0em 0;"></div>
+				{{> commentSubmit}}
+			{{/if}}
 		</div>
 	</div>
 </template>

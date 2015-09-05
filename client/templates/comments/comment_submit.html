@@ -1,0 +1,12 @@
+<template name="commentSubmit">
+	<form name="comment" class="comment-form form">
+	    <div class="row">
+	        <div class="input-field col s12">
+				<i class="material-icons prefix">comment</i>
+	            <label for="body" data-error="{{errorMessage 'body'}}">Comment on this post</label>
+	            <textarea name="body" id="body" class="materialize-textarea {{errorClass 'body'}}" rows="3" length="200"></textarea>
+	        </div>
+	    </div>
+    	<button type="submit" class="btn btn-teal waves-effect waves-light">Add Comment</button>
+	</form>
+</template>

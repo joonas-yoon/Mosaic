@@ -1,8 +1,16 @@
 /**
+ * Customize default CSS properities
+ */
+html, body {
+	background-color: #fefefe;
+}
+
+/**
  * Customize derived CSS
  */
-.input-field label {
-	width: 100%;
+label[data-error]:after, label[data-success]:after {
+	/* This is updated by https://github.com/Dogfalo/materialize/issues/1690 */
+	white-space: nowrap;
 }
 
 /**
