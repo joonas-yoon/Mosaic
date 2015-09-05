@@ -1,9 +1,15 @@
 <template name="postsList">
 	<div class="container">
 		<ul class="collection">
+		{{#if posts.count}}
 		{{#each posts}}
 			{{> postItem}}
 		{{/each}}
+		{{else}}
+			<li class="collection-item center">
+				<i class="small material-icons">error_outline</i><br/>There is no item.
+			</li>
+		{{/if}}
 		</ul>
 	</div>
 </template>
