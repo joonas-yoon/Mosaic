@@ -16,9 +16,9 @@
 
 <template name="postItem">
 	<li class="collection-item avatar">
-		<i class="material-icons circle {{#if pending}}{{else}}green{{/if}}">chat_bubble</i>
+		<i class="material-icons circle {{#if pending}}{{else}}green{{/if}}">polymer</i>
 		<span class="title"><a href="{{pathFor 'postPage'}}" class="green-text">{{title}}</a></span>
-		<p>{{url}}</p>
+		<p>{{author}}</p>
 		{{#if commentsCount}}
 		<a href="{{pathFor 'postPage'}}" class="secondary-content">
 			<i class="material-icons">comment</i>&nbsp;{{commentsCount}}

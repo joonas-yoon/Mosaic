@@ -2,7 +2,7 @@
 	{{> postPageView}}	
 	<div class="row">
 		<div class="col s12 l6 offset-l3">
-			<div class="divider"></div>
+			<div class="divider" style="margin-bottom:2.0em"></div>
 			{{> postPageComments}}
 		</div>
 	</div>
@@ -30,9 +30,11 @@
 
 <template name="postPageComments">
 	{{#if comments.count}}
+		<ul class="collection comments-list">
 		{{#each comments}}
-			{{> commentItem }}
+			{{> commentItem}}
 		{{/each}}
+		</ul>
 	{{else}}
 		<p class="grey-text center">There is no comments yet.</p>
 	{{/if}}
