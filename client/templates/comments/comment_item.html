@@ -1,8 +1,8 @@
 <template name="commentItem">
-	<li class="collection-item avatar z-depth-1 comments-item">
+	<li class="collection-item avatar z-depth-1 comment-item">
 		<img src="/noprofile.png" alt="profile" class="circle" />
 		<span class="title green-text accent-3">{{author}}</span>
-		<p class="grey-text small">on {{submittedText}}</p>
-		<p>{{body}}</p>
+		{{#markdown}}{{body}}{{/markdown}}
+		<p class="comment-footer">on {{submittedText}}</p>
 	</li>
 </template>

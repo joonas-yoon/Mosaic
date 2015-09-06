@@ -53,14 +53,25 @@ nav .brand-logo {
 div#main {
 	padding: 3.5em 0;
 }
+
+/* Comments */
 ul.collection.comments-list {
 	border: 0;
 }
-li.collection-item.comments-item {
+li.collection-item.comment-item {
 	border: 1px solid #eeeeee;
 	border-radius: 5px;
 	margin-bottom: 20px;
 }
+.comment-item .comment-footer {
+	font-size: 0.875em;
+	color: #bebebe;
+	text-align: right;
+	border-top: 1px solid #ccc;
+	margin-top: 1.75em !important;
+}
+
+/* Notifications */
 .notifi-btn {
 	line-height: initial;
 }
@@ -68,3 +79,6 @@ li.collection-item.comments-item {
 	color: #263238;
 	background-color: #cfd8dc !important;
 }
+
+
+
