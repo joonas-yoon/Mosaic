@@ -12,6 +12,9 @@ label[data-error]:after, label[data-success]:after {
 	/* This is updated by https://github.com/Dogfalo/materialize/issues/1690 */
 	white-space: nowrap;
 }
+.inline-block {
+	display:inline-block !important;
+}
 
 /**
  * Added CSS Properties
@@ -57,4 +60,11 @@ li.collection-item.comments-item {
 	border: 1px solid #eeeeee;
 	border-radius: 5px;
 	margin-bottom: 20px;
+}
+.notifi-btn {
+	line-height: initial;
+}
+.modal.notifications {
+	color: #263238;
+	background-color: #cfd8dc !important;
 }
