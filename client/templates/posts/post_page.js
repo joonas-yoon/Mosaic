@@ -1,6 +1,9 @@
 Template.postPageView.helpers({
 	ownPost: function() {
 		return this.userId === Meteor.userId();
+	},
+	submittedText: function() {
+		return this.submitted.toString();
 	}
 });
 

@@ -16,12 +16,12 @@ Template.postSubmit.events({
     e.preventDefault();
 
     var post = {
-      url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      title: $(e.target).find('[name=title]').val(),
+      content: $(e.target).find('[name=content]').val()
     };
 
     var errors = validatePost(post);
-    if (errors.title || errors.url)
+    if (errors.title || errors.content)
       return Session.set('postSubmitErrors', errors);
 
 	Meteor.call('postInsert', post, function(error, result) {
@@ -31,9 +31,14 @@ Template.postSubmit.events({
 
 		// show this result but route anyway
 		if (result.postExists) {
-			return throwError('This link has already been posted');
+			return throwError('This title has already been posted');
 		}
 	});
 	Router.go('postsList');
   }
 });
+
+Template.postSubmit.rendered = function() {
+  $('textarea.materialize-textarea').characterCounter();
+}
+

@@ -18,8 +18,8 @@ Template.postEdit.events({
     var currentPostId = this._id;
 
     var postProperties = {
-      url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      title: $(e.target).find('[name=title]').val(),
+      content: $(e.target).find('[name=content]').val()
     }
 
     var errors = validatePost(postProperties);
@@ -46,3 +46,8 @@ Template.postEdit.events({
     }
   }
 });
+
+Template.postEdit.rendered = function() {
+  $('textarea.materialize-textarea').characterCounter();
+}
+

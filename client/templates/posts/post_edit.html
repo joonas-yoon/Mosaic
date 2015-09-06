@@ -1,9 +1,9 @@
 <template name="postEdit">
-	<div class="row">
+	<div class="row posts">
 		<div class="col s12 l6 offset-l3">
 			<div class="card">
 			<form>
-				<div class="card-action">
+				<div class="card-action card-header">
 					<a href="{{pathFor 'postPage'}}"><i class="material-icons">replay</i></a>
 				</div>
 				<div class="card-content">
@@ -15,8 +15,8 @@
 					</div>
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate {{errorClass 'url'}}" value="{{url}}" name="url" id="url" />
-							<label class="active" for="url" data-error="{{errorMessage 'url'}}" data-success="It is right!">URL</label>
+							<textarea class="materialize-textarea" name="content" id="content" placeholder="Place your content" length="1000">{{content}}</textarea>
+							<label class="active" for="content">Content</label>
 						</div>
 					</div>
 				</div>

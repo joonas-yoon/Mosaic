@@ -13,20 +13,19 @@
 </template>
 
 <template name="postPageView">
-	<div class="row">
+	<div class="row posts">
 		<div class="col s12 l6 offset-l3">
 			<div class="card blue-grey darken-1">
-				<div class="card-action">
+				<div class="card-action card-header">
 					<a href="{{pathFor 'postsList'}}"><i class="material-icons">list</i></a>
+					{{#if ownPost}}&nbsp;<a href="{{pathFor 'postEdit'}}"><i class="material-icons">edit</i></a>{{/if}}
 				</div>
 				<div class="card-content white-text">
 					<span class="card-title green-text text-lighten-3">{{title}}</span>
-					<p><a href="{{url}}" class="white-text">{{url}}</a></p>
+					<div class="white-text">{{#markdown}}{{content}}{{/markdown}}</div>
 					<p class="right-align grey-text text-lighten-1">Written by {{#if author}}{{author}}{{else}}Anonymous{{/if}}</p>
 				</div>
-				<div class="card-action">
-					{{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="btn blue-grey lighten-3 black-text waves-effect waves-light">Edit</a>{{/if}}
-				</div>
+				<div class="card-action submitted"><p>{{submittedText}}</p></div>
 			</div>
 		</div>
 	</div>

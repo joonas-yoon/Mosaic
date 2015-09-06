@@ -54,6 +54,12 @@ div#main {
 	padding: 3.5em 0;
 }
 
+/* Posts */
+.posts .card .card-action.card-header { padding-bottom: 0; }
+.posts .card .card-content { padding-top: 0; }
+.posts .card .card-action.submitted { padding:10px 20px; }
+.posts .card .card-action.submitted p { margin:5px auto; font-size: 0.875em; color:#eee; }
+
 /* Comments */
 ul.collection.comments-list {
 	border: 0;
