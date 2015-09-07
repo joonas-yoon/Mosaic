@@ -10,6 +10,12 @@
 				<i class="small material-icons">info_outline</i><br/>There is no item.
 			</li>
 		{{/if}}
+
+		{{#if nextPath}}
+			<li class="collection-item center">
+				<a class="load-more" href="{{nextPath}}">Load more</a>
+			</li>
+		{{/if}}
 		</ul>
 	</div>
 </template>
