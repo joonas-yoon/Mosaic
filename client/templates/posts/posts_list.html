@@ -15,6 +15,10 @@
 			<li class="collection-item center">
 				<a class="load-more" href="{{nextPath}}">Load more</a>
 			</li>
+		{{else}}
+			{{#unless ready}}
+				{{> preloader}}
+			{{/unless}}
 		{{/if}}
 		</ul>
 	</div>
