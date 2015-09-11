@@ -1,38 +1,39 @@
 <template name="postsList">
-	<div class="container">
-		<ul class="collection">
-		{{#if posts.count}}
+	<div class="row">
+	{{#if posts.count}}
 		{{#each posts}}
 			{{> postItem}}
 		{{/each}}
-		{{else}}
-			<li class="collection-item center">
-				<i class="small material-icons">info_outline</i><br/>There is no item.
-			</li>
-		{{/if}}
-
-		{{#if nextPath}}
-			<li class="collection-item center">
-				<a class="load-more" href="{{nextPath}}">Load more</a>
-			</li>
-		{{else}}
-			{{#unless ready}}
-				{{> preloader}}
-			{{/unless}}
-		{{/if}}
-		</ul>
+	{{else}}
+	<div class="col s12 center">
+			<p><i class="small material-icons">info_outline</i><br/>There is no item.</p>
+		</div>
+	{{/if}}
+	{{#if nextPath}}
+		<div class="col s12 center">
+			<a class="btn teal waves-effect waves-light load-more" href="{{nextPath}}"> Load more </a>
+		</div>
+	{{else}}
+		{{#unless ready}}
+			{{> preloader}}
+		{{/unless}}
+	{{/if}}
 	</div>
 </template>
 
 <template name="postItem">
-	<li class="collection-item avatar">
-		<i class="material-icons circle {{#if pending}}{{else}}green{{/if}}">polymer</i>
-		<span class="title"><a href="{{pathFor 'postPage'}}" class="green-text">{{title}}</a></span>
-		<p class="grey-text darken-2">by {{author}}</p>
-		{{#if commentsCount}}
-		<a href="{{pathFor 'postPage'}}" class="secondary-content">
-			<i class="material-icons">comment</i>&nbsp;{{commentsCount}}
-		</a>
-		{{/if}}
-	</li>
+	<div class="col s12 l3">
+		<div class="card {{#if pending}}pending{{/if}}">
+			<div class="card-content">
+				<div class="card-title">
+					<a href="{{pathFor 'postPage'}}{{nLoadUri}}" class="title-text">{{substr title}}</a>
+				</div>
+				<p class="grey-text darken-2">
+					{{#if commentsCount}}{{withPlural commentsCount "comment"}},&nbsp;{{/if}}
+					by {{author}}
+				</p>
+				<div class="spinner"></div>
+			</div>
+		</div>
+	</div>
 </template>

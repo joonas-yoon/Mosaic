@@ -78,6 +78,11 @@ div#main {
 }
 
 /* Posts */
+.card.pending {	background-color: #cccccc;	box-shadow: none; }
+.card.pending * {color: #999;}
+.card.pending .spinner{clear:both;width:100%;display:block;text-align:center;}
+.card.pending .spinner:after{content: url('http://www.key4biz.it/wp-includes//images/wpspin-2x.gif'); }
+.btn.load-more { margin:2em auto; }
 .posts .card .card-action.card-header { padding-bottom: 0; }
 .posts .card .card-content { padding-top: 0; }
 .posts .card .card-action.submitted { padding:10px 20px; }

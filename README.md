@@ -18,3 +18,6 @@ git remote -v // 연결상태를 확인한다.
 git push origin master // 깃허브로 푸시한다.
 ```
 From: [https://nolboo...github-for-beginner/](https://nolboo.github.io/blog/2013/10/06/github-for-beginner/)
+
+
+Reference: [http://ecogeo.tistory.com/276](http://ecogeo.tistory.com/276)
