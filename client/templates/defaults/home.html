@@ -9,26 +9,13 @@
 		</div>
 		<div class="col s12 m4">
 			<div class="row center">
-				<br><br>
-				<form method="POST" action="./logic.php">
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="useremail" type="email" class="validate">
-						<label for="useremail">Email</label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="password" type="password" class="validate">
-						<label for="password">Password</label>
-					</div>
-				</div>
-				<a href="#" class="btn-large waves-effect waves-light red accent-2">Get Started</a>
-				<p class="flow-text center">or</p>
-				<a href="#" type="button" class="btn-large waves-effect waves-light blue accent-2">Generate</a>
-				</form>
+			{{#if currentUser}}
+				<p>You're logged in.</p>
+			{{else}}
+				{{> register}}
+				{{> login}}
+			{{/if}}
 			</div>
 		</div>
 	</div>
-
 </template>
