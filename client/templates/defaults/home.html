@@ -9,11 +9,17 @@
 		</div>
 		<div class="col s12 m4">
 			<div class="row center">
+				<a class="btn-flat waves-effect waves-teal-light right regToggle">
+					{{#if regMode}}Login{{else}}Register{{/if}}
+				</a>
 			{{#if currentUser}}
 				<p>You're logged in.</p>
 			{{else}}
-				{{> register}}
-				{{> login}}
+				{{#if regMode}}
+					{{> register}}
+				{{else}}
+					{{> login}}
+				{{/if}}
 			{{/if}}
 			</div>
 		</div>

@@ -3,7 +3,9 @@
 		<div class="nav-wrapper">
 			<a id="brand-logo-container" href="http://alps.jbnu.ac.kr:8080" class="brand-logo">Mosaic Logic</a>
 			<ul class="right">
+				{{#if isNotHomeRoute}}
 				<li>{{> loginButtons}}</li>
+				{{/if}}
 				<li><a href="{{pathFor 'postsList'}}"><i class="material-icons">list</i></a></li>
 				{{#if currentUser}}
 				<li><a href="{{pathFor 'postSubmit'}}"><i class="material-icons">chat_bubble_outline</i></a></li>
