@@ -13,7 +13,7 @@
 					{{#if regMode}}Login{{else}}Register{{/if}}
 				</a>
 			{{#if currentUser}}
-				<p>You're logged in.</p>
+				{{> profile}}
 			{{else}}
 				{{#if regMode}}
 					{{> register}}
