@@ -1,3 +1,28 @@
+Template.loginBtn.rendered = function(){
+	$('.modal-trigger').leanModal({	
+      in_duration: 300, // Transition in duration
+      out_duration: 200 // Transition out duration
+	});
+};
+
+Template.loginModal.created = function(){
+	this.regMode = new ReactiveVar(false);
+};
+
+Template.loginModal.helpers({
+	regMode: function(){
+		return Template.instance().regMode.get();
+	}
+});
+
+Template.loginModal.events({
+	'click .regToggle': function(evt, template){
+		evt.preventDefault();
+		var mod = template.regMode.get();
+		template.regMode.set(!mod);
+	}
+});
+
 Template.register.events({
   'submit form': function(event){
     event.preventDefault();
@@ -27,7 +52,10 @@ Template.login.events({
     var emailVar = event.target.loginEmail.value;
     var passwordVar = event.target.loginPassword.value;
     Meteor.loginWithPassword(emailVar, passwordVar, function(err){
-      if(err) throwError("Sorry, Failed Login. Please check your account again.");
+      if(err)
+        throwError("Sorry, Failed Login. Please check your account again.");
+      else
+        $('#login').closeModal();
     });
   }
 });
