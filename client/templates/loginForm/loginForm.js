@@ -13,7 +13,6 @@ Template.loginForm.events({
 		evt.preventDefault();
 		var mod = template.regMode.get();
 		template.regMode.set(!mod);
-		console.log("Here is reg");
 	}
 });
 
@@ -23,6 +22,13 @@ Template.loginBtn.rendered = function(){
       out_duration: 200 // Transition out duration
 	});
 };
+
+Template.loginBtn.helpers({
+	btnText: function(){
+		if(Meteor.userId()) return Meteor.user().emails[0].address;
+		return "Sign in";
+	}
+});
 
 Template.loginModal.created = function(){
 	this.regMode = new ReactiveVar(false);

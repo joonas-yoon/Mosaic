@@ -1,10 +1,10 @@
 <template name="loginForm">
-	<a class="btn-flat waves-effect waves-teal-light right regToggle">
-		{{#if regMode}}Login{{else}}Register{{/if}}
-	</a>
 	{{#if currentUser}}
 		{{> profile}}
 	{{else}}
+		<a class="btn-flat waves-effect waves-teal-light right regToggle">
+			{{#if regMode}}Login{{else}}Register{{/if}}
+		</a>
 		{{#if regMode}}
 			{{> register}}
 		{{else}}
@@ -14,9 +14,7 @@
 </template>
 
 <template name="loginBtn">
-	<a class="modal-trigger" href="#login">
-		Login {{temp}}
-	</a>
+	<a class="modal-trigger" href="#login">{{btnText}}</a>
 </template>
 
 <template name="loginModal">
