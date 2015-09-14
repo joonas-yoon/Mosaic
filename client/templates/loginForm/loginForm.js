@@ -1,3 +1,22 @@
+Template.loginForm.created = function(){
+	this.regMode = new ReactiveVar(false);
+};
+
+Template.loginForm.helpers({
+	regMode: function(){
+		return Template.instance().regMode.get();
+	}
+});
+
+Template.loginForm.events({
+	'click .regToggle': function(evt, template){
+		evt.preventDefault();
+		var mod = template.regMode.get();
+		template.regMode.set(!mod);
+		console.log("Here is reg");
+	}
+});
+
 Template.loginBtn.rendered = function(){
 	$('.modal-trigger').leanModal({	
       in_duration: 300, // Transition in duration

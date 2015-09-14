@@ -9,18 +9,7 @@
 		</div>
 		<div class="col s12 m4">
 			<div class="row center">
-				<a class="btn-flat waves-effect waves-teal-light right regToggle">
-					{{#if regMode}}Login{{else}}Register{{/if}}
-				</a>
-			{{#if currentUser}}
-				{{> profile}}
-			{{else}}
-				{{#if regMode}}
-					{{> register}}
-				{{else}}
-					{{> login}}
-				{{/if}}
-			{{/if}}
+				{{> loginForm}}
 			</div>
 		</div>
 	</div>

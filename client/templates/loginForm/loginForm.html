@@ -1,6 +1,21 @@
+<template name="loginForm">
+	<a class="btn-flat waves-effect waves-teal-light right regToggle">
+		{{#if regMode}}Login{{else}}Register{{/if}}
+	</a>
+	{{#if currentUser}}
+		{{> profile}}
+	{{else}}
+		{{#if regMode}}
+			{{> register}}
+		{{else}}
+			{{> login}}
+		{{/if}}
+	{{/if}}
+</template>
+
 <template name="loginBtn">
 	<a class="modal-trigger" href="#login">
-		Login
+		Login {{temp}}
 	</a>
 </template>
 
@@ -9,18 +24,7 @@
 		<div class="modal-content">
 			<h4>Sign in/up</h4>
 			<div class="row center">
-				<a class="btn-flat waves-effect waves-teal-light right regToggle">
-					{{#if regMode}}Login{{else}}Register{{/if}}
-				</a>
-			{{#if currentUser}}
-				{{> profile}}
-			{{else}}
-				{{#if regMode}}
-					{{> register}}
-				{{else}}
-					{{> login}}
-				{{/if}}
-			{{/if}}
+				<div class="col s12 l6 offset-l3">{{> loginForm}}</div>
 			</div>
 		</div>
 		<div class="modal-footer">
