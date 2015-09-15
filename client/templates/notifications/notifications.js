@@ -23,14 +23,6 @@ Template.notificationItem.events({
 });
 
 Template.notifications.rendered = function() {
-  $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrain_width: false, // Does not change width of dropdown to that of the activator
-      hover: false,
-      gutter: 10
-    }
-  );
   $('.notifi-btn').sideNav({
     menuWidth: 300, // Default is 240
     edge: 'left', // Choose the horizontal origin

@@ -116,9 +116,8 @@ li.collection-item.comment-item {
 .notifi-btn {
 	line-height: initial;
 }
-.modal.notifications {
+.notifications {
 	color: #263238;
-	background-color: #cfd8dc !important;
 }
 
 

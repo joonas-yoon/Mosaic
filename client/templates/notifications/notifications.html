@@ -5,21 +5,20 @@
 <template name="notifications">
   {{> notificationButton count=notificationCount}}
   <div id="Notifications" class="side-nav notifications">
-      <h4>
-        <i class="mdi-social-notifications inline-block"></i> Notifications
-        <a href="#!" class="modal-action modal-close right waves-effect waves-light btn-flat" style="overflow:visible;">
-          <i class="mdi-content-clear"></i>
-        </a>
-      </h4>
-      {{#if notificationCount}}
-        <ul class="collection">
-        {{#each notifications}}
-          {{> notificationItem}}
-        {{/each}}
-        </ul>
-      {{else}}
-        <p class="center grey-text">No Notifications</p>
-      {{/if}}
+    <h4>Notifications
+      <a href="#!" class="right nav-close" style="overflow:visible;">
+        <i class="mdi-content-clear"></i>
+      </a>
+    </h4>
+    {{#if notificationCount}}
+      <ul class="collection">
+      {{#each notifications}}
+        {{> notificationItem}}
+      {{/each}}
+      </ul>
+    {{else}}
+      <p class="center grey-text">No Notifications</p>
+    {{/if}}
   </div>
 </template>
 
