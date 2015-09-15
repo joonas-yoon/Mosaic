@@ -119,6 +119,10 @@ li.collection-item.comment-item {
 .notifications {
 	color: #263238;
 }
+.notifications.side-nav h4 {
+	padding-left: 10px;
+    line-height: inherit;
+}
 
 
 

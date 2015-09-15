@@ -30,3 +30,9 @@ Template.notifications.rendered = function() {
   });
 };
 
+Template.notifications.events({
+  'click nav-close': function(){
+    $('#Notification').sideNav('hide');
+  }
+});
+
