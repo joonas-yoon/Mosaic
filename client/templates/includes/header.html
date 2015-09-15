@@ -1,7 +1,9 @@
 <template name="header">
 	<nav role="navigation">
 		<div class="nav-wrapper">
-			<a id="brand-logo-container" href="http://alps.jbnu.ac.kr:8080" class="brand-logo">Mosaic Logic</a>
+			<!-- Show on large screen -->
+			<div class="hide-on-med-and-down">
+			<a id="brand-logo-container" href="/" class="brand-logo">Mosaic Logic</a>
 			<ul class="right">
 				{{#if isNotHomeRoute}}
 				<li>{{> loginBtn}}</li>
@@ -12,10 +14,24 @@
 				<li>{{> notifications}}</li>
 				{{/if}}
 			</ul>
-			<a href="#" data-activates="slide-out" class="right button-collapse"><i class="material-icons">more_vert</i></a>
+			</div>
+
+			<!-- Show on medium and below -->
+			<div class="hide-on-large-only">
+			<a href="#" data-activates="slide-out" class="button-collapse right" style="padding-right:0.25em;">
+				<i class="material-icons">more_vert</i>
+			</a>
+			<ul id="slide-out" class="side-nav fixed">
+				<li>{{> loginBtn onlyOpen="true"}}</li>
+				<li><a href="{{pathFor 'postsList'}}"><i class="material-icons left">list</i>List</a></li>
+				{{#if currentUser}}
+				<li><a href="{{pathFor 'postSubmit'}}"><i class="material-icons left">chat_bubble_outline</i>Submit</a></li>
+				<li>{{> notificationButton}}</li>
+				{{/if}}
+			</ul>
+			</div>
 		</div>
 	</nav>
 	{{> loginModal}}
 </template>
-
 

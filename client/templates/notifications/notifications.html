@@ -1,13 +1,10 @@
-<template name="notifications">
-  <a href="#Notifications" class="notifi-btn" data-target="Notifications">
-    <i class="mdi-social-notifications inline-block"></i>
-    {{#if notificationCount}}
-      &nbsp;+{{notificationCount}}
-    {{/if}}
-  </a>
+<template name="notificationPage">
+  <!-- TODO: Add to router -->
+</template>
 
-  <div id="Notifications" class="modal bottom-sheet notifications">
-    <div class="modal-content">
+<template name="notifications">
+  {{> notificationButton count=notificationCount}}
+  <div id="Notifications" class="side-nav notifications">
       <h4>
         <i class="mdi-social-notifications inline-block"></i> Notifications
         <a href="#!" class="modal-action modal-close right waves-effect waves-light btn-flat" style="overflow:visible;">
@@ -15,23 +12,32 @@
         </a>
       </h4>
       {{#if notificationCount}}
-        <div class="collection">
+        <ul class="collection">
         {{#each notifications}}
           {{> notificationItem}}
         {{/each}}
-        </div>
+        </ul>
       {{else}}
         <p class="center grey-text">No Notifications</p>
       {{/if}}
-    </div>
   </div>
-
 </template>
 
 <template name="notificationItem">
-  <a class="collection-item avatar" href="{{notificationPostPath}}">
-    <img src="/noprofile.png" class="circle" alt="{{commenterName}}" />
-    <span class="title"><strong>{{commenterName}}</strong></span>
-    <p>commented on your post "<b>{{notificationPostTitle}}</b>"</p>
-  </a>
+	<a href="{{notificationPostPath}}">
+	<li class="collection-item avatar">
+		<img src="/noprofile.png" class="circle" alt="{{commenterName}}" />
+		<span class="title"><strong>{{commenterName}}</strong></span>
+		<p>commented on your post "<b>{{notificationPostTitle}}</b>"</p>
+	</li>
+	</a>
+</template>
+
+<template name="notificationButton">
+	<a href="#" data-activates="Notifications" class="notifi-btn">
+		<i class="mdi-social-notifications inline-block"></i>
+		{{#if count}}
+			&nbsp;+{{count}}
+		{{/if}}
+	</a>
 </template>

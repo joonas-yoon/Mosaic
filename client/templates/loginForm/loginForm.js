@@ -17,34 +17,23 @@ Template.loginForm.events({
 });
 
 Template.loginBtn.rendered = function(){
-	$('.modal-trigger').leanModal({	
-      in_duration: 300, // Transition in duration
-      out_duration: 200 // Transition out duration
+	$('.modal-trigger').leanModal({
+		dismissible: true, // Modal can be dismissed by clicking outside of the modal
+		in_duration: 300,  // Transition in duration
+		out_duration: 200, // Transition out duration
 	});
 };
 
+Template.loginBtn.events({
+	'click .modal-opener': function(){
+		$('#login.modal').openModal();
+	}
+});
+
 Template.loginBtn.helpers({
 	btnText: function(){
-		if(Meteor.userId()) return Meteor.user().emails[0].address;
+		if(!!Meteor.userId()) return Meteor.user().emails[0].address;
 		return "Sign in";
-	}
-});
-
-Template.loginModal.created = function(){
-	this.regMode = new ReactiveVar(false);
-};
-
-Template.loginModal.helpers({
-	regMode: function(){
-		return Template.instance().regMode.get();
-	}
-});
-
-Template.loginModal.events({
-	'click .regToggle': function(evt, template){
-		evt.preventDefault();
-		var mod = template.regMode.get();
-		template.regMode.set(!mod);
 	}
 });
 

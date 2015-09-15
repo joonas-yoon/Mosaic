@@ -14,7 +14,7 @@
 </template>
 
 <template name="loginBtn">
-	<a class="modal-trigger" href="#login">{{btnText}}</a>
+	<a class="{{#if onlyOpen}}modal-opener{{else}}modal-trigger{{/if}}" href="#login">{{btnText}}</a>
 </template>
 
 <template name="loginModal">

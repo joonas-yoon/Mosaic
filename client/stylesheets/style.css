@@ -40,6 +40,13 @@ label[data-error]:after, label[data-success]:after {
 }
 
 /**
+ * Modified or Added on original Material CSS
+ */
+.side-nav li .material-icons {
+	line-height: inherit;
+}
+
+/**
  * Added CSS Properties
  */
 div.cell {
@@ -66,7 +73,7 @@ div#playBoard {
 	background-color: #26a69a;
 }
 nav .brand-logo {
-	color: rgba(0,0,0,.0);
+	color: rgba(255,255,255,.0) !important;
 	font-size: 1em;
 	background-image: url('./logo.cube.png');
     background-size: contain;
