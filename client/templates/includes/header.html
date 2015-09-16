@@ -22,7 +22,7 @@
 				<i class="material-icons">more_vert</i>
 			</a>
 			<ul id="slide-out" class="side-nav fixed">
-				<li>{{> loginBtn onlyOpen="true"}}</li>
+				<li>{{> loginBtn}}</li>
 				<li><a href="{{pathFor 'postsList'}}"><i class="material-icons left">list</i>List</a></li>
 				{{#if currentUser}}
 				<li><a href="{{pathFor 'postSubmit'}}"><i class="material-icons left">chat_bubble_outline</i>Submit</a></li>
