@@ -59,7 +59,7 @@ Template.login.events({
     var passwordVar = event.target.loginPassword.value;
     Meteor.loginWithPassword(emailVar, passwordVar, function(err){
       if(err)
-        throwError("Sorry, Failed Login. Please check your account again.");
+        throwError("Sorry, Please check your account again.");
       else
         $('#login').closeModal();
     });
